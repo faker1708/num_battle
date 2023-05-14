@@ -77,9 +77,9 @@ class dva_train():
                 agent = opponent_list[flag]
                 # vision = np.array([vision])
                 action,prob,wrong = agent.take_action(vision)
-                # if(flag ==2):
-                #     # print('prob',prob)
-                #     pass
+                if(flag ==2):
+                    # print('prob',prob)
+                    pass
                 if(wrong==1):return 0,wrong
                 
                 # if(flag ==1):
@@ -91,7 +91,7 @@ class dva_train():
                     print(ta,pl)
                     # if(pl[-1]>0.8):
                         # print('使坏')
-                    # action = 0
+                    action = 0
 
                     pass
                 next_vision,next_flag,terminal = game.step(action)

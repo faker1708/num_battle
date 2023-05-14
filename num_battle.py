@@ -23,7 +23,9 @@ class num_battle():
     def reset(self):
 
         flag = 1
-        view = 0
+        view = list()
+        view.append(0)
+        view.append(88)
 
         self.now_playing_flag = 1
 
@@ -80,7 +82,7 @@ class num_battle():
         if(flag==1):
             fa = 2*action +1
         else:
-            fa = 2*action+2
+            fa = 2*action +2
         status[flag] = fa
 
 
@@ -116,5 +118,9 @@ class num_battle():
 
 
         next_flag = flag   # 12阵营交替
-        next_view = 0
+        
+        next_view = list()
+        next_view.append(0)
+        next_view.append(77)
+
         return next_view,next_flag,termi
